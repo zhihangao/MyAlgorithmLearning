@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -40,6 +41,13 @@ int mystack::pop_one(){
 
 
 int main(int argc, char** argv) {
-	mystack *test = new mystack(10);
+	mystack test = mystack(10);
+	cout << test.get_num() << endl;
+	test.push_one(0);
+	cout << test.get_num() << endl;
+	test.push_one(1);
+	cout << test.get_num() << endl;
+	cout << test.pop_one() << endl;
+	cout << test.get_num() << endl;
 	return 0;
 }
